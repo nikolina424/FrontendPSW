@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   model: any = {}
   currentUser$: Observable<User>;
-  
+  public alertError = false;
 
   constructor(private authService: AuthService, private router:Router) { }
  
@@ -24,9 +24,10 @@ export class LoginComponent implements OnInit {
   
   login() {
       this.authService.login(this.model).subscribe(response => {
-        console.log("saljem ga na homepage");
         this.router.navigateByUrl('/homepage');
-      }, error => { console.log(error.error);
+      }, error => { 
+        console.log(error.error);
+        this.alertError = true;
       })
   }
 

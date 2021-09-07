@@ -1,3 +1,12 @@
+<nz-alert
+    nzType="error"
+    *ngIf="alertError"
+    nzMessage="Error"
+    nzDescription="You entered wrong credentials, or your account is blocked."
+    nzShowIcon
+>
+</nz-alert>
+
 <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
     <div class="container">
       <h1>Login</h1>

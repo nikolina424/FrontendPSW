@@ -1,3 +1,4 @@
+import { BlockComponent } from './pages/block/block.component';
 import { NewFeedbackComponent } from './pages/new-feedback/new-feedback.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
@@ -31,7 +32,8 @@ registerLocaleData(en);
     FrontpageComponent,
     HomepageComponent,
     FeedbackComponent,
-    NewFeedbackComponent
+    NewFeedbackComponent,
+    BlockComponent
   ],
   imports: [
     BrowserModule,

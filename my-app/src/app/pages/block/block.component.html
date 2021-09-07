@@ -1,0 +1,14 @@
+<div class="album">
+    <div class="container">
+        <div class="row row-cols-sm-2 row-cols-md-3">
+            <div class="col">
+                <div class="card" *ngFor='let patient of patients'>
+                    <div class="card-body">
+                        <p class="card-text" >{{patient.firstName}} {{patient.lastName}}</p>
+                        <button type="button"  (click)="block(patient)" class ="btn btn-sm btn-outline-secondary">Block</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

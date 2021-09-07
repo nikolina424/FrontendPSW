@@ -68,4 +68,8 @@ export class HomepageComponent implements OnInit {
   getAllFeedbacks(){
     this.router.navigate(['homepage/feedback']);
   }
+
+  blockPatient(){
+    this.router.navigate(['homepage/block']);
+  }
 }

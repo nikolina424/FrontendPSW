@@ -1,3 +1,4 @@
+import { BlockComponent } from './pages/block/block.component';
 import { NewFeedbackComponent } from './pages/new-feedback/new-feedback.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'homepage', component: HomepageComponent, children:[
     {path: 'feedback', component:FeedbackComponent},
+    {path: 'block', component:BlockComponent},
     {path: 'new-feedback', component: NewFeedbackComponent}
   ]
   },
