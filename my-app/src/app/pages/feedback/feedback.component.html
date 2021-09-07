@@ -1,0 +1,27 @@
+<div class="album">
+    <div class="container">
+        <div class="row row-cols-sm-2 row-cols-md-3">
+            <div class="col">
+                <div class="card" *ngFor='let feedback of feedbacks'>
+                    <div class="card-body">
+                        <p class="card-text" [ngValue]="feedback" >{{feedback.feedbackContent}} </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="check">
+                                 <button type="button" [ngValue]="feedback" (click)="show(feedback)" class ="btn btn-sm btn-outline-secondary">Show</button>
+                                <button type="button" [ngValue]="feedback" (click)="hide(feedback)" class="btn btn-sm btn-outline-secondary">Hide</button> 
+                              <!-- Show : <input type="checkbox" ng-model="showOnFront" ng-init="showOnFront = true"> -->
+                            </div>
+                            <small class="text-muted">{{feedback.usersFirstName}} {{feedback.usersLastName}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+
+
+        

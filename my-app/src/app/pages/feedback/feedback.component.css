@@ -1,0 +1,9 @@
+.container{
+    margin-left: 0px;
+    width: 100%;
+    overflow: visible;
+}
+
+.text_muted .hover{
+    background-color: rgb(78, 103, 173);
+}

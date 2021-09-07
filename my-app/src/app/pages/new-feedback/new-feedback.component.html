@@ -1,0 +1,23 @@
+<nz-alert
+    nzType="success"
+    *ngIf="alertSucc"
+    nzMessage="Success"
+    nzDescription="Your feedback is sent!"
+    nzShowIcon
+>
+</nz-alert>
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <br>
+     <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="text">Write your feedback </nz-form-label>
+         <nz-form-control class="ime" [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid!">
+           <input nz-input formControlName="feedbackContent" id="feedbackContent" />
+         </nz-form-control>
+       </nz-form-item>
+     <nz-form-item nz-row class="register-area">
+       <nz-form-control [nzSpan]="14" [nzOffset]="6">
+           <br>
+         <button class="labela" nz-button nzType="primary" nzGhost>Sent feedback</button>
+       </nz-form-control>
+     </nz-form-item>
+</form>

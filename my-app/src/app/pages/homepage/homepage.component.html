@@ -1,0 +1,13 @@
+<nz-layout class="layout">
+    <nz-header>
+      <ul nz-menu nzTheme="dark" nzMode="horizontal">
+        <li nz-menu-item *ngIf="isAdmin" (click)="getAllFeedbacks()">Feedbacks</li> 
+        <li nz-menu-item *ngIf="isPatient" (click)="createFeedback()">Create feedback</li> 
+        <li nz-menu-item (click)="logout()">Logout</li>
+      </ul>
+    </nz-header>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+</nz-layout>
+        

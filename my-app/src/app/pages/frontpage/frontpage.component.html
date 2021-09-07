@@ -5,5 +5,21 @@
         <li nz-menu-item class="letterSize" (click)="registrationForm()">Register</li>
       </ul>
     </nz-header>
+    <nz-content>
+      <nz-list class="nn" nzGrid>
+          <div nz-row [nzGutter]="16">
+            <div nz-col [nzXXl]="6" [nzXl]="4" [nzLg]="6" [nzMd]="6" [nzSm]="12" [nzXs]="10"  *ngFor='let feedback of arr'>
+              <nz-list-item>
+                  <div *ngIf="feedback?.showOnFront">
+                  <nz-card nzTitle="{{feedback.usersFirstName}} {{feedback.usersLastName}}">
+                      <p class="card-text" [ngValue]="feedback" > <b>{{feedback.feedbackContent}}</b> </p>
+                  </nz-card>
+                  </div>
+                </nz-list-item>
+            </div>
+          </div>
+      </nz-list>
+  
+  </nz-content>
 </nz-layout>
       
