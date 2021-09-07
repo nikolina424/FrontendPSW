@@ -1,0 +1,38 @@
+<form #formLogin="ngForm" (ngSubmit)="register()">
+    <div class="container">
+      <h1>Register</h1>
+      <hr>
+  
+      <label for="username"><b>Username</b></label>
+      <input type="email" [(ngModel)]="model.username" placeholder="Enter Email" name="email" autocomplete="off" required>
+  
+      <label for="password"><b>Password</b></label>
+      <input type="password" [(ngModel)]="model.password" placeholder="Enter Password" name="password"  required>
+
+      <hr>
+      <label for="firstName"><b>First Name</b></label>
+      <input type="text"[(ngModel)]="model.firstName" placeholder="Enter First name" name="firstName">
+
+      <label for="lastName"><b>Last Name</b></label>
+      <input type="text"[(ngModel)]="model.lastName" placeholder="Enter Last name" name="lastName">
+
+      <label for="address"><b>Address</b></label>
+      <input type="text"[(ngModel)]="model.address" placeholder="Enter address" name="address"> 
+
+      <label for="town"><b>Town</b></label>
+      <input type="text"[(ngModel)]="model.town" placeholder="Enter town" name="town"> 
+
+      <label for="select"><b>General practitioner:</b></label>
+
+      <select class="selected" name ="idGeneralPractitioner" [(ngModel)]="model.idGeneralPractitioner"  (change)="changeSelect($event, formLogin)">
+         <option value={{doctor.id}} name ="idGeneralPractitioner" *ngFor='let doctor of doctors'>{{doctor.firstName}} {{doctor.lastName}}</option>
+      </select>
+
+  
+      <button type="submit"  class="btnRegister">Register</button>
+    </div>
+  
+    <div class="container signin">
+      <p>Already have an account? <a href="login">Sign in</a>.</p>
+    </div>
+  </form>
